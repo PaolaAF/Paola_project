@@ -14559,12 +14559,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: {
-                    automatic: true
+                    linebreaks: { 
+                    automatic: true 
                     }
                 }
             });
-
+        
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -14607,7 +14607,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Link de GitHub</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s2">"Este es el link de GitHub:"</span><span class="p">,</span> <span class="s2">"https://github.com/PaolaAF/Paola_project"</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Este es el link de GitHub:&quot;</span><span class="p">,</span> <span class="s2">&quot;https://github.com/PaolaAF/Paola_project&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14643,7 +14643,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Importando las librerias correspondientes</span>
@@ -14672,11 +14672,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Cargando la información correspondiente</span>
-<span class="n">ind</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"./Indicadores_de_desarrollo.csv"</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"latin1"</span><span class="p">)</span>
+<span class="n">ind</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./Indicadores_de_desarrollo.csv&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;latin1&quot;</span><span class="p">)</span>
 <span class="n">ind</span>
 </pre></div>
 
@@ -14695,7 +14695,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
 
@@ -15039,28 +15039,28 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Hacemos una copia del dataframe </span>
 <span class="n">idg</span> <span class="o">=</span> <span class="n">ind</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">idg</span> <span class="o">=</span> <span class="n">idg</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'Country Name'</span><span class="p">)</span>
+<span class="n">idg</span> <span class="o">=</span> <span class="n">idg</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Country Name&#39;</span><span class="p">)</span>
 
 <span class="c1"># Nos quedamos con las variables solicitadas </span>
-<span class="n">columnas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Country Code"</span><span class="p">,</span> <span class="s2">"Series Name"</span><span class="p">,</span><span class="s1">'2010 [YR2010]'</span><span class="p">,</span> <span class="s1">'2011 [YR2011]'</span><span class="p">,</span> <span class="s1">'2012 [YR2012]'</span><span class="p">,</span> <span class="s1">'2013 [YR2013]'</span><span class="p">,</span> <span class="s1">'2014 [YR2014]'</span><span class="p">,</span>
-            <span class="s1">'2015 [YR2015]'</span><span class="p">,</span> <span class="s1">'2016 [YR2016]'</span><span class="p">,</span> <span class="s1">'2017 [YR2017]'</span><span class="p">]</span>
-<span class="n">filas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Chile"</span><span class="p">,</span> <span class="s2">"Colombia"</span><span class="p">,</span> <span class="s2">"Mexico"</span><span class="p">,</span> <span class="s2">"Peru"</span><span class="p">]</span>
+<span class="n">columnas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Country Code&quot;</span><span class="p">,</span> <span class="s2">&quot;Series Name&quot;</span><span class="p">,</span><span class="s1">&#39;2010 [YR2010]&#39;</span><span class="p">,</span> <span class="s1">&#39;2011 [YR2011]&#39;</span><span class="p">,</span> <span class="s1">&#39;2012 [YR2012]&#39;</span><span class="p">,</span> <span class="s1">&#39;2013 [YR2013]&#39;</span><span class="p">,</span> <span class="s1">&#39;2014 [YR2014]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;2015 [YR2015]&#39;</span><span class="p">,</span> <span class="s1">&#39;2016 [YR2016]&#39;</span><span class="p">,</span> <span class="s1">&#39;2017 [YR2017]&#39;</span><span class="p">]</span>
+<span class="n">filas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Chile&quot;</span><span class="p">,</span> <span class="s2">&quot;Colombia&quot;</span><span class="p">,</span> <span class="s2">&quot;Mexico&quot;</span><span class="p">,</span> <span class="s2">&quot;Peru&quot;</span><span class="p">]</span>
 <span class="n">new_idg</span> <span class="o">=</span> <span class="n">idg</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">filas</span><span class="p">,</span> <span class="n">columnas</span><span class="p">]</span>
 <span class="n">new_idg</span>
 
 <span class="c1"># Cambiamos los títulos del dataframe</span>
-<span class="n">new_idg</span> <span class="o">=</span> <span class="n">new_idg</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'2010 [YR2010]'</span><span class="p">:</span> <span class="s1">'2010'</span><span class="p">,</span> <span class="s1">'2011 [YR2011]'</span><span class="p">:</span> <span class="s1">'2011'</span><span class="p">,</span> <span class="s1">'2012 [YR2012]'</span><span class="p">:</span> <span class="s1">'2012'</span><span class="p">,</span> 
-                                  <span class="s1">'2013 [YR2013]'</span><span class="p">:</span> <span class="s1">'2013'</span><span class="p">,</span> <span class="s1">'2014 [YR2014]'</span><span class="p">:</span> <span class="s1">'2014'</span><span class="p">,</span> <span class="s1">'2015 [YR2015]'</span><span class="p">:</span> <span class="s1">'2015'</span><span class="p">,</span>
-                                  <span class="s1">'2016 [YR2016]'</span><span class="p">:</span> <span class="s1">'2016'</span><span class="p">,</span> <span class="s1">'2017 [YR2017]'</span><span class="p">:</span> <span class="s1">'2017'</span>
+<span class="n">new_idg</span> <span class="o">=</span> <span class="n">new_idg</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;2010 [YR2010]&#39;</span><span class="p">:</span> <span class="s1">&#39;2010&#39;</span><span class="p">,</span> <span class="s1">&#39;2011 [YR2011]&#39;</span><span class="p">:</span> <span class="s1">&#39;2011&#39;</span><span class="p">,</span> <span class="s1">&#39;2012 [YR2012]&#39;</span><span class="p">:</span> <span class="s1">&#39;2012&#39;</span><span class="p">,</span> 
+                                  <span class="s1">&#39;2013 [YR2013]&#39;</span><span class="p">:</span> <span class="s1">&#39;2013&#39;</span><span class="p">,</span> <span class="s1">&#39;2014 [YR2014]&#39;</span><span class="p">:</span> <span class="s1">&#39;2014&#39;</span><span class="p">,</span> <span class="s1">&#39;2015 [YR2015]&#39;</span><span class="p">:</span> <span class="s1">&#39;2015&#39;</span><span class="p">,</span>
+                                  <span class="s1">&#39;2016 [YR2016]&#39;</span><span class="p">:</span> <span class="s1">&#39;2016&#39;</span><span class="p">,</span> <span class="s1">&#39;2017 [YR2017]&#39;</span><span class="p">:</span> <span class="s1">&#39;2017&#39;</span>
                                  <span class="p">})</span>
 
 <span class="c1"># Guardamos nuestro nuevo data frame</span>
-<span class="n">new_idg</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'New_IDG.csv'</span><span class="p">)</span>
+<span class="n">new_idg</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;New_IDG.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15084,11 +15084,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Cargando la información correspondiente</span>
-<span class="n">base</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"./New_IDG.csv"</span><span class="p">)</span>
+<span class="n">base</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./New_IDG.csv&quot;</span><span class="p">)</span>
 <span class="n">base</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Redondeamos la información a 2 dígitos</span>
 <span class="n">base</span>
 </pre></div>
@@ -15108,7 +15108,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
@@ -15508,11 +15508,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filtrar por 'Series Name' y 'Country Name'</span>
-<span class="n">filtro_serie</span> <span class="o">=</span> <span class="n">base</span><span class="p">[</span><span class="s1">'Series Name'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Access to electricity (</span><span class="si">% o</span><span class="s1">f population)'</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filtrar por &#39;Series Name&#39; y &#39;Country Name&#39;</span>
+<span class="n">filtro_serie</span> <span class="o">=</span> <span class="n">base</span><span class="p">[</span><span class="s1">&#39;Series Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Access to electricity (</span><span class="si">% o</span><span class="s1">f population)&#39;</span>
 <span class="c1"># Aplicar los filtros</span>
 <span class="n">AP</span> <span class="o">=</span> <span class="n">base</span><span class="p">[</span><span class="n">filtro_serie</span><span class="p">]</span>
 <span class="n">AP</span>
@@ -15533,7 +15533,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
 
@@ -15642,18 +15642,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gráfico 1:</span>
 <span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">AP</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">"Country Name:N"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"Países miembros de la Alianza del Pacífico"</span><span class="p">),</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">"2010:Q"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">""</span><span class="p">),</span>
-    <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s2">"Country Name"</span><span class="p">,</span> <span class="s2">"2010"</span><span class="p">]</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;Country Name:N&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Países miembros de la Alianza del Pacífico&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;2010:Q&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">),</span>
+    <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Country Name&quot;</span><span class="p">,</span> <span class="s2">&quot;2010&quot;</span><span class="p">]</span>
 <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
     <span class="n">width</span><span class="o">=</span><span class="mi">340</span><span class="p">,</span>  <span class="c1"># Ajustar el ancho del gráfico</span>
     <span class="n">height</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span>  <span class="c1"># Ajustar la altura del gráfico</span>
-    <span class="n">title</span><span class="o">=</span><span class="s2">"Acceso a la electrcidad (</span><span class="si">% d</span><span class="s2">e la población) en el 2010"</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Acceso a la electrcidad (</span><span class="si">% d</span><span class="s2">e la población) en el 2010&quot;</span>
 <span class="p">)</span>
 
 <span class="c1"># Mostrar el gráfico</span>
@@ -15682,23 +15682,23 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
 <style>
-  #altair-viz-f09aa02db0484766b87fb2cafbcc98cf.vega-embed {
+  #altair-viz-200441d054884ece826c0d6a17971b9f.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-f09aa02db0484766b87fb2cafbcc98cf.vega-embed details,
-  #altair-viz-f09aa02db0484766b87fb2cafbcc98cf.vega-embed details summary {
+  #altair-viz-200441d054884ece826c0d6a17971b9f.vega-embed details,
+  #altair-viz-200441d054884ece826c0d6a17971b9f.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-f09aa02db0484766b87fb2cafbcc98cf"></div>
+<div id="altair-viz-200441d054884ece826c0d6a17971b9f"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-f09aa02db0484766b87fb2cafbcc98cf") {
-      outputDiv = document.getElementById("altair-viz-f09aa02db0484766b87fb2cafbcc98cf");
+    if (outputDiv.id !== "altair-viz-200441d054884ece826c0d6a17971b9f") {
+      outputDiv = document.getElementById("altair-viz-200441d054884ece826c0d6a17971b9f");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -15770,24 +15770,24 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filtrar por 'Series Name' y 'Country Name'</span>
-<span class="n">filtro_serie</span> <span class="o">=</span> <span class="n">base</span><span class="p">[</span><span class="s1">'Series Name'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Labor force, female (</span><span class="si">% o</span><span class="s1">f total labor force)'</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filtrar por &#39;Series Name&#39; y &#39;Country Name&#39;</span>
+<span class="n">filtro_serie</span> <span class="o">=</span> <span class="n">base</span><span class="p">[</span><span class="s1">&#39;Series Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Labor force, female (</span><span class="si">% o</span><span class="s1">f total labor force)&#39;</span>
 <span class="c1"># Aplicar los filtros</span>
 <span class="n">AP1</span> <span class="o">=</span> <span class="n">base</span><span class="p">[</span><span class="n">filtro_serie</span><span class="p">]</span>
 
 <span class="c1"># Realizando el gráfico</span>
 <span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">AP</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">"Country Name:N"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"Países miembros de la Alianza del Pacífico"</span><span class="p">),</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">"2012:Q"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">""</span><span class="p">),</span>
-    <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">"Country Name:N"</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s1">'category10'</span><span class="p">)),</span>  <span class="c1"># Escala de colores</span>
-    <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s2">"Country Name"</span><span class="p">,</span> <span class="s2">"2012"</span><span class="p">]</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;Country Name:N&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Países miembros de la Alianza del Pacífico&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;2012:Q&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;Country Name:N&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;category10&#39;</span><span class="p">)),</span>  <span class="c1"># Escala de colores</span>
+    <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Country Name&quot;</span><span class="p">,</span> <span class="s2">&quot;2012&quot;</span><span class="p">]</span>
 <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
     <span class="n">width</span><span class="o">=</span><span class="mi">340</span><span class="p">,</span>  <span class="c1"># Ajustar el ancho del gráfico</span>
     <span class="n">height</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span>  <span class="c1"># Ajustar la altura del gráfico</span>
-    <span class="n">title</span><span class="o">=</span><span class="s2">"Fuerza laboral femenida (</span><span class="si">% d</span><span class="s2">e la fuerza laboral total) en el 2012"</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Fuerza laboral femenida (</span><span class="si">% d</span><span class="s2">e la fuerza laboral total) en el 2012&quot;</span>
 <span class="p">)</span>
 
 <span class="c1"># Mostrar el gráfico</span>
@@ -15816,23 +15816,23 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
 <style>
-  #altair-viz-fcfb15d09dd4485697b0fc50c44a127d.vega-embed {
+  #altair-viz-8eba893d2fbb4ca8b8658558388ee362.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-fcfb15d09dd4485697b0fc50c44a127d.vega-embed details,
-  #altair-viz-fcfb15d09dd4485697b0fc50c44a127d.vega-embed details summary {
+  #altair-viz-8eba893d2fbb4ca8b8658558388ee362.vega-embed details,
+  #altair-viz-8eba893d2fbb4ca8b8658558388ee362.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-fcfb15d09dd4485697b0fc50c44a127d"></div>
+<div id="altair-viz-8eba893d2fbb4ca8b8658558388ee362"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-fcfb15d09dd4485697b0fc50c44a127d") {
-      outputDiv = document.getElementById("altair-viz-fcfb15d09dd4485697b0fc50c44a127d");
+    if (outputDiv.id !== "altair-viz-8eba893d2fbb4ca8b8658558388ee362") {
+      outputDiv = document.getElementById("altair-viz-8eba893d2fbb4ca8b8658558388ee362");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -15904,14 +15904,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Cambiamos de formato de wide a long:</span>
-<span class="n">tbl_melt</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span> <span class="n">id_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Country Name'</span><span class="p">,</span> <span class="s1">'Country Code'</span><span class="p">,</span> <span class="s1">'Series Name'</span><span class="p">],</span>
-                   <span class="n">value_vars</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">base</span> <span class="k">if</span> <span class="n">col</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'20'</span><span class="p">)])</span>
+<span class="n">tbl_melt</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span> <span class="n">id_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Series Name&#39;</span><span class="p">],</span>
+                   <span class="n">value_vars</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">base</span> <span class="k">if</span> <span class="n">col</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;20&#39;</span><span class="p">)])</span>
 <span class="c1"># Modificando nombres</span>
-<span class="n">new_tbl_melt</span> <span class="o">=</span> <span class="n">tbl_melt</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'variable'</span><span class="p">:</span> <span class="s1">'Year'</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">:</span> <span class="s1">'Value'</span><span class="p">})</span>
+<span class="n">new_tbl_melt</span> <span class="o">=</span> <span class="n">tbl_melt</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;variable&#39;</span><span class="p">:</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;Value&#39;</span><span class="p">})</span>
 </pre></div>
 
      </div>
@@ -15924,12 +15924,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filtrar por 'Series Name' y 'Country Name'</span>
-<span class="n">con1</span> <span class="o">=</span> <span class="n">new_tbl_melt</span><span class="p">[</span><span class="s1">'Country Name'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Chile'</span>
-<span class="n">con2</span> <span class="o">=</span> <span class="n">new_tbl_melt</span><span class="p">[</span><span class="s1">'Series Name'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'GDP growth (annual %)'</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filtrar por &#39;Series Name&#39; y &#39;Country Name&#39;</span>
+<span class="n">con1</span> <span class="o">=</span> <span class="n">new_tbl_melt</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Chile&#39;</span>
+<span class="n">con2</span> <span class="o">=</span> <span class="n">new_tbl_melt</span><span class="p">[</span><span class="s1">&#39;Series Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;GDP growth (annual %)&#39;</span>
 
 <span class="c1"># Aplicar los filtros</span>
 <span class="n">resultado</span> <span class="o">=</span> <span class="n">new_tbl_melt</span><span class="p">[</span><span class="n">con1</span> <span class="o">&amp;</span> <span class="n">con2</span><span class="p">]</span>
@@ -15951,7 +15951,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
@@ -16062,18 +16062,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Graficando</span>
 <span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span><span class="o">.</span><span class="n">mark_line</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">'Year:O'</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">"Año"</span><span class="p">),</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">'Value:Q'</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">"Crecimiento del PIB"</span><span class="p">),</span>
-    <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s1">'Year:O'</span><span class="p">,</span> <span class="s1">'Value:Q'</span><span class="p">]</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Year:O&#39;</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Año&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Value:Q&#39;</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Crecimiento del PIB&quot;</span><span class="p">),</span>
+    <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Year:O&#39;</span><span class="p">,</span> <span class="s1">&#39;Value:Q&#39;</span><span class="p">]</span>
 <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
     <span class="n">width</span><span class="o">=</span><span class="mi">340</span><span class="p">,</span>  <span class="c1"># Ajustar el ancho del gráfico</span>
     <span class="n">height</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span>  <span class="c1"># Ajustar la altura del gráfico</span>
-    <span class="n">title</span><span class="o">=</span><span class="s2">"Crecimiento del PBI de Chile en el periodo 2010 - 2017"</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Crecimiento del PBI de Chile en el periodo 2010 - 2017&quot;</span>
 <span class="p">)</span>
 
 <span class="c1"># Mostrar el gráfico</span>
@@ -16102,23 +16102,23 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
 <style>
-  #altair-viz-6cb3df9acd354f95af83e3e9699bd25f.vega-embed {
+  #altair-viz-391ebfb63daa46309969a9c45a445423.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-6cb3df9acd354f95af83e3e9699bd25f.vega-embed details,
-  #altair-viz-6cb3df9acd354f95af83e3e9699bd25f.vega-embed details summary {
+  #altair-viz-391ebfb63daa46309969a9c45a445423.vega-embed details,
+  #altair-viz-391ebfb63daa46309969a9c45a445423.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-6cb3df9acd354f95af83e3e9699bd25f"></div>
+<div id="altair-viz-391ebfb63daa46309969a9c45a445423"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-6cb3df9acd354f95af83e3e9699bd25f") {
-      outputDiv = document.getElementById("altair-viz-6cb3df9acd354f95af83e3e9699bd25f");
+    if (outputDiv.id !== "altair-viz-391ebfb63daa46309969a9c45a445423") {
+      outputDiv = document.getElementById("altair-viz-391ebfb63daa46309969a9c45a445423");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -16190,29 +16190,29 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filtrar por 'Series Name' y 'Country Name'</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filtrar por &#39;Series Name&#39; y &#39;Country Name&#39;</span>
 <span class="n">resultado1</span> <span class="o">=</span> <span class="n">new_tbl_melt</span><span class="p">[</span><span class="n">con2</span><span class="p">]</span>
 <span class="c1">#resultado --&gt; nos muestra información de los países miembros de la AP y el Crecimiento del PIB</span>
 
 <span class="c1"># Crear el gráfico lineal:</span>
 <span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">resultado1</span><span class="p">)</span><span class="o">.</span><span class="n">mark_line</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">'Year:O'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"Año"</span><span class="p">),</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">'Value:Q'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"Crecimiento del PIB"</span><span class="p">),</span>
-    <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">'Country Name:N'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"País"</span><span class="p">),</span>
-    <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s1">'Country Name:N'</span><span class="p">,</span> <span class="s1">'Year:O'</span><span class="p">,</span> <span class="s1">'Value:Q'</span><span class="p">]</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Year:O&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Año&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Value:Q&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Crecimiento del PIB&quot;</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Country Name:N&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;País&quot;</span><span class="p">),</span>
+    <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Country Name:N&#39;</span><span class="p">,</span> <span class="s1">&#39;Year:O&#39;</span><span class="p">,</span> <span class="s1">&#39;Value:Q&#39;</span><span class="p">]</span>
 <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
     <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
     <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
-    <span class="n">title</span><span class="o">=</span><span class="s2">"Crecimiento del PIB de los países miembros de la Alianza del Pacífico (2010 - 2017)"</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Crecimiento del PIB de los países miembros de la Alianza del Pacífico (2010 - 2017)&quot;</span>
 <span class="p">)</span><span class="o">.</span><span class="n">configure_axis</span><span class="p">(</span>
     <span class="n">labelFontSize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
     <span class="n">titleFontSize</span><span class="o">=</span><span class="mi">14</span>
 <span class="p">)</span><span class="o">.</span><span class="n">configure_title</span><span class="p">(</span>
     <span class="n">fontSize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
-    <span class="n">fontWeight</span><span class="o">=</span><span class="s1">'bold'</span>
+    <span class="n">fontWeight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span>
 <span class="p">)</span>
 
 <span class="c1"># Mostrar el gráfico</span>
@@ -16241,23 +16241,23 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
 <style>
-  #altair-viz-332a39ee98154c2db30839e6770eba9c.vega-embed {
+  #altair-viz-cebcd6602c0e4fbd8c3c6da059437721.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-332a39ee98154c2db30839e6770eba9c.vega-embed details,
-  #altair-viz-332a39ee98154c2db30839e6770eba9c.vega-embed details summary {
+  #altair-viz-cebcd6602c0e4fbd8c3c6da059437721.vega-embed details,
+  #altair-viz-cebcd6602c0e4fbd8c3c6da059437721.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-332a39ee98154c2db30839e6770eba9c"></div>
+<div id="altair-viz-cebcd6602c0e4fbd8c3c6da059437721"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-332a39ee98154c2db30839e6770eba9c") {
-      outputDiv = document.getElementById("altair-viz-332a39ee98154c2db30839e6770eba9c");
+    if (outputDiv.id !== "altair-viz-cebcd6602c0e4fbd8c3c6da059437721") {
+      outputDiv = document.getElementById("altair-viz-cebcd6602c0e4fbd8c3c6da059437721");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
